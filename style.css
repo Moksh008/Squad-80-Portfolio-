@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .wrapper,
+  .content {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .content {
+    overflow-x: hidden;
+  }
+  
+  .content .section {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .content .section.hero {
+    background-image:url(squad.png) ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .image-container {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    perspective: 500px;
+    overflow: hidden;
+  }
+  
+  /* .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  } */
+  
+
+  .custom-navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    background: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-links, .nav-external {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-links li {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #007bff;
+  }
+  
+  .nav-links .logo {
+    color: blue;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links .logo img {
+    width: 20px;
+    height: auto;
+    margin-right: 8px;
+  }
+  
+  .nav-external {
+    margin-left: auto;
+    font-size: 14px;
+  }
+  
+  .nav-external a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .nav-external a:hover {
+    text-decoration: underline;
+  }
+  
+ 
+  .nav-external {
+    position: absolute;
+    right: 20px;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.squadbody {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.section {
+  display: flex;
+  background: url(Squad80.jpeg);
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  padding: 5px;
+  margin: 10px;
+  position: relative;
+  border-radius: 7px;
+  perspective: 2000px;
+}
+
+.card:hover .card-front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-back {
+  transform: rotateY(360deg);
+  box-shadow: 0 0 20px #5B372A;
+}
+
+.card-front, 
+.card-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 7px;
+  backface-visibility: hidden;
+  transition: 0.5s;
+}
+
+.card-front {
+  background-color: #9E9E9E;
+  color: #5D4037;
+}
+
+.card-back {
+  background-color: #5D4037;
+  color: #FFFFFF;
+  transform: rotateY(180deg);
+}

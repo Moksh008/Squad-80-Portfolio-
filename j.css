@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Poiret+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poiret One', sans-serif;
+}
+
+body {
+  background: teal;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  padding: 1em 0;
+  border-bottom: 0.2rem solid black;
+}
+
+a, a:hover, a:active, a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+a {
+  text-align: center;
+  background-color: black;
+  border-radius: 2em;
+  padding: 0.5rem;
+  display: inline-block;
+}
+
+a img {
+  height: 1em;
+  width: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  align-items: start;
+  min-height: 110vh;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 650px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+  }
+
+  .grid img {
+    flex: 1 1 40vw;
+  }
+}
+
+:root {
+  --index: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.loader-placeholder {
+  grid-column: span 4;
+  text-align: center;
+  background-color: yellow;
+}
+
+.fade-in-animate {
+  animation-name: fade-in;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
